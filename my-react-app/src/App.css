@@ -1,0 +1,159 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.scheme-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scheme-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+/* =========================
+   IMPROVED FOOTER THEME
+========================= */
+/* =========================
+   FOOTER STYLES
+========================= */
+
+footer {
+  background: linear-gradient(
+    135deg,
+    #020617 0%,
+    #020617 40%,
+    #0b1f44 100%
+  );
+  color: #e5e7eb;
+  border-top: 1px solid #1f2937;
+}
+
+/* Headings */
+footer h5,
+footer h6 {
+  color: #f8fafc;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Text */
+footer p,
+footer li,
+footer span {
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* Links */
+footer a {
+  color: #93c5fd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #bfdbfe;
+  text-decoration: underline;
+}
+
+/* Lists */
+footer ul li {
+  margin-bottom: 8px;
+}
+
+/* Contact */
+footer .contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Divider */
+footer hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #1f2937,
+    transparent
+  );
+  margin: 2rem 0;
+}
+
+/* Bottom bar */
+footer .footer-bottom {
+  color: #94a3b8;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   RESPONSIVE FIX
+========================= */
+
+@media (max-width: 992px) {
+  footer .container {
+    text-align: center;
+  }
+
+  footer .row > div {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  footer h5,
+  footer h6 {
+    font-size: 1.05rem;
+  }
+
+  footer p,
+  footer li {
+    font-size: 0.9rem;
+  }
+
+  footer .row > div {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  footer .footer-bottom {
+    text-align: center;
+  }
+}
