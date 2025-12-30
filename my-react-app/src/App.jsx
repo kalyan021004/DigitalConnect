@@ -6,7 +6,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 /* Pages */
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-import Signup from "./pages/SignUp";
+import Signup from "./pages/Signup";
 import CitizenSchemes from "./pages/CitizenSchemes";
 import MyApplications from "./pages/MyApplications";
 import AdminApplications from "./pages/AdminApplications";
@@ -31,7 +31,7 @@ export default function App() {
         <Routes className="app-dark">
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/signup" element={<Signup />} />
 
           {/* Citizen */}
           <Route path="/schemes" element={<ProtectedRoute roles={["citizen"]}><CitizenSchemes /></ProtectedRoute>} />
