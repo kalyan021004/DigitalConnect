@@ -1,8 +1,87 @@
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 
 export default function Home() {
   const navigate = useNavigate();
+  const { user } = useAuth();
 
+  /* ===============================
+     STATE ADMIN HOME
+  =============================== */
+  if (user?.role === "state_admin") {
+    return (
+      <div className="container my-5">
+
+        {/* ADMIN HERO */}
+        <div className="card scheme-card p-5 shadow-lg mb-5">
+          <h1 className="mb-2">
+            Welcome, <span style={{ color: "#60a5fa" }}>State Administrator</span>
+          </h1>
+          <p className="page-subtitle">
+            Manage government schemes, review applications, and monitor platform activity.
+          </p>
+        </div>
+
+        {/* ADMIN ACTION CARDS */}
+        <div className="row g-4">
+
+          <div className="col-md-6 col-lg-3">
+            <div
+              className="card scheme-card h-100 text-center p-4"
+              role="button"
+              onClick={() => navigate("/admin/applications")}
+            >
+              <h4>📂 Applications</h4>
+              <p>Review, approve, reject, and manage citizen applications.</p>
+            </div>
+          </div>
+
+          <div className="col-md-6 col-lg-3">
+            <div
+              className="card scheme-card h-100 text-center p-4"
+              role="button"
+              onClick={() => navigate("/admin/schemes")}
+            >
+              <h4>📜 Manage Schemes</h4>
+              <p>Create, activate, deactivate, and update schemes.</p>
+            </div>
+          </div>
+
+          <div className="col-md-6 col-lg-3">
+            <div
+              className="card scheme-card h-100 text-center p-4"
+              role="button"
+              onClick={() => navigate("/grievance/panchayat")}
+            >
+              <h4>🛠 Grievances</h4>
+              <p>Monitor and escalate unresolved grievances.</p>
+            </div>
+          </div>
+
+          <div className="col-md-6 col-lg-3">
+            <div
+              className="card scheme-card h-100 text-center p-4"
+              role="button"
+              onClick={() => navigate("/profile")}
+            >
+              <h4>👤 Admin Profile</h4>
+              <p>View and update your administrator profile.</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="text-center mt-5 page-subtitle">
+          Administrative control panel for efficient governance.
+        </div>
+
+      </div>
+    );
+  }
+
+  /* ===============================
+     DEFAULT (CITIZEN) HOME
+  =============================== */
   return (
     <div className="container my-5">
 
@@ -38,52 +117,36 @@ export default function Home() {
 
         <div className="col-md-6 col-lg-3">
           <div className="card scheme-card h-100 text-center p-4">
-            <h4 className="mb-2">📜 Government Schemes</h4>
-            <p>
-              Browse and apply for central & state government welfare schemes
-              designed for rural development.
-            </p>
+            <h4>📜 Government Schemes</h4>
+            <p>Browse and apply for welfare schemes.</p>
           </div>
         </div>
 
         <div className="col-md-6 col-lg-3">
           <div className="card scheme-card h-100 text-center p-4">
-            <h4 className="mb-2">🏥 Health Services</h4>
-            <p>
-              Consult government-registered doctors and manage appointments
-              seamlessly.
-            </p>
+            <h4>🏥 Health Services</h4>
+            <p>Consult doctors and manage appointments.</p>
           </div>
         </div>
 
         <div className="col-md-6 col-lg-3">
           <div className="card scheme-card h-100 text-center p-4">
-            <h4 className="mb-2">🛠 Grievance Redressal</h4>
-            <p>
-              Raise village-level issues and track grievance resolution with
-              transparency.
-            </p>
+            <h4>🛠 Grievance Redressal</h4>
+            <p>Submit and track grievances transparently.</p>
           </div>
         </div>
 
         <div className="col-md-6 col-lg-3">
           <div className="card scheme-card h-100 text-center p-4">
-            <h4 className="mb-2">🏛 Local Governance</h4>
-            <p>
-              Direct interaction between citizens, Gram Panchayat, and
-              authorities.
-            </p>
+            <h4>🏛 Local Governance</h4>
+            <p>Connect with Gram Panchayat and authorities.</p>
           </div>
         </div>
 
       </div>
 
-      {/* FOOTER TAGLINE */}
-      <div className="text-center mt-5">
-        <p className="page-subtitle">
-          Digital governance for transparent, inclusive, and empowered rural
-          communities.
-        </p>
+      <div className="text-center mt-5 page-subtitle">
+        Digital governance for empowered rural communities.
       </div>
 
     </div>

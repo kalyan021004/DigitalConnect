@@ -157,5 +157,47 @@ label .required {
   background-color: transparent;
   cursor: not-allowed;
 }
+/*Greiveances*/
+.dashboard-bg {
+  background: linear-gradient(180deg, #0b1220 0%, #020617 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.dashboard-shell {
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px;
+  max-width: 1400px;
+  margin: auto;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+}
+
+.dashboard-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 16px;
+  text-align: center;
+  border-left: 6px solid;
+}
+
+.stat-card.primary { border-color: #2563eb; }
+.stat-card.info { border-color: #06b6d4; }
+.stat-card.warning { border-color: #facc15; }
+stat-card.success { border-color: #16a34a; }
+.stat-card.danger { border-color: #dc2626; }
+
+.status-submitted { background: #facc15; color: #000; }
+.status-under_review { background: #38bdf8; }
+.status-resolved { background: #22c55e; }
+.status-rejected { background: #ef4444; }
+
 
 
