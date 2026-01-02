@@ -35,7 +35,7 @@ connectDB();
 const app = express();
 
 app.use(cors({
-    origin: "https://rural-connect-smoky.vercel.app",
+    origin: "http://localhost:5173",
     credentials: true
 }));
 

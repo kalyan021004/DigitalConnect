@@ -78,6 +78,81 @@ export default function Home() {
       </div>
     );
   }
+
+  /* ===============================
+   DOCTOR HOME
+================================ */
+if (user?.role === "doctor_admin") {
+  return (
+    <div className="container my-5">
+
+      {/* DOCTOR HERO */}
+      <div className="card scheme-card p-5 shadow-lg mb-5">
+        <h1 className="mb-2">
+          Welcome, <span style={{ color: "#60a5fa" }}>Doctor</span>
+        </h1>
+        <p className="page-subtitle">
+          Manage appointments, monitor patient vitals, and provide timely care.
+        </p>
+      </div>
+
+      {/* DOCTOR ACTION CARDS */}
+      <div className="row g-4">
+
+        <div className="col-md-6 col-lg-3">
+          <div
+            className="card scheme-card h-100 text-center p-4"
+            role="button"
+            onClick={() => navigate("/doctor/appointments")}
+          >
+            <h4>📅 Appointments</h4>
+            <p>View, manage, and complete patient appointments.</p>
+          </div>
+        </div>
+
+        <div className="col-md-6 col-lg-3">
+          <div
+            className="card scheme-card h-100 text-center p-4"
+            role="button"
+            onClick={() => navigate("/doctor/monitor")}
+          >
+            <h4>❤️ Live Health Monitor</h4>
+            <p>View real-time vitals from connected devices.</p>
+          </div>
+        </div>
+
+        <div className="col-md-6 col-lg-3">
+          <div
+            className="card scheme-card h-100 text-center p-4"
+            role="button"
+            onClick={() => navigate("/doctor/history")}
+          >
+            <h4>📊 Patient History</h4>
+            <p>Analyze medical history and ML-based risk insights.</p>
+          </div>
+        </div>
+
+        <div className="col-md-6 col-lg-3">
+          <div
+            className="card scheme-card h-100 text-center p-4"
+            role="button"
+            onClick={() => navigate("/profile")}
+          >
+            <h4>👤 Doctor Profile</h4>
+            <p>View and update your professional details.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div className="text-center mt-5 page-subtitle">
+        Digital healthcare dashboard for proactive patient care.
+      </div>
+
+    </div>
+  );
+}
+
   /* ===============================
    GRAM PANCHAYAT HOME
 ================================ */

@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://ruralconnect-mb0b.onrender.com/api", // change if needed
+  baseURL: "http://localhost:5000/api", // change if needed
 });
 
 /* Attach token automatically */
